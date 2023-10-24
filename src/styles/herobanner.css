@@ -1,6 +1,35 @@
 .herobanner {
+    text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 50px 20px;
+    gap: 50px;
 }
 
-.herobanner .hero-img {
+.hero-img {
+    height: auto;
+    width: 100%;
+}
+
+.hero-details .heading {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 100%;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.hero-details .sub-heading {
+    color: hsl(257, 7%, 63%);
+    margin-bottom: 15px;
+}
+
+.hero-btn {
+    color: white;
+    border: none;
+    background: hsl(180, 66%, 49%);
+    padding: 15px 40px;
+    font-weight: 700;
+    border-radius: 35px;
 }
