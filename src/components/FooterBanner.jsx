@@ -4,8 +4,8 @@ function FooterBanner() {
     return (
         <>
             <div className="footer-banner">
-                <h2 className="ft-heading">Boosts your links today</h2>
-                <button className="">Get Started</button>
+                <h2 className="footer-heading">Boosts your links today</h2>
+                <button className="footer-btn">Get Started</button>
             </div>
         </>
     )
