@@ -1,0 +1,63 @@
+.input-field {
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(../assets/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 30px;
+    margin: 20px 20px;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.input-field label {
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 5px;
+}
+
+.input-field input {
+    border: none;
+    padding: 8px 0;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-field {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    background-color: white;
+}
+
+.result-field .input-text {
+    padding: 10px 15px;
+    border-bottom: 1px solid gainsboro;
+    font-size: 16px;
+}
+
+.result-field .input-result {
+    color: hsl(180, 66%, 49%);
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.result-field button {
+    background-color: hsl(180, 66%, 49%);
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 8px 15px 15px 15px;
+}
