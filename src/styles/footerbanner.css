@@ -1,0 +1,23 @@
+.footer-banner {
+    background-image: url(../assets/images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 27%, 26%);
+    padding: 120px 0 80px 0;
+    text-align: center;
+}
+
+.footer-heading {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-btn {
+    color: white;
+    border: none;
+    background: hsl(180, 66%, 49%);
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 35px;
+}
