@@ -9,7 +9,7 @@ function Herobanner() {
                 <div className="hero-details">
                     <h1 className="heading">More than just shorter links</h1>
                     <p className="sub-heading">Build your brand's recognition and get detailed insights on how your links are performing</p>
-                    <button className="">Get Started</button>
+                    <button className="hero-btn">Get Started</button>
                 </div>
             </div>
         </>
