@@ -13,6 +13,7 @@ function Feature() {
                 </div>
                 <div className="feature-list">
                     <div className="feature-container">
+                        <div className="underline"></div>
                         <img className="" src={brandRecognition} alt="brand-reconition-img" />
                         <h3>Brand Recognition</h3>
                         <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
