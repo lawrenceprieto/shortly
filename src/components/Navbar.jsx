@@ -14,6 +14,19 @@ function Navbar() {
         <>
             <div className="navbar">
                 <img className="logo" src={logo} alt="logo" />
+                <div className="desktop-nav">
+                    <div className="nav-link">
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Resources</a></li>
+                        </ul>
+                    </div>
+                    <div className="buttons">
+                        <button className="login">Login</button>
+                        <button className="signup">Sign up</button>
+                    </div>
+                </div>
                 <img  className="hamburger" src={hamburger} 
                     alt="hamburger-button"  
                     onClick={handleOpenMenu}
