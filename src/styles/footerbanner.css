@@ -21,3 +21,31 @@
     font-weight: 700;
     border-radius: 35px;
 }
+
+/* mobile view */
+@media (max-width: 640px) {
+
+}
+
+/* tablet view */
+@media (min-width: 641px) and (max-width: 1007px) {
+
+}
+
+/* desktop view */
+@media (min-width: 1008px) {
+    .footer-banner {
+        background-image: url(../assets/images/bg-boost-desktop.svg);
+        padding: 0 100px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-heading {
+        font-size: 35px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
