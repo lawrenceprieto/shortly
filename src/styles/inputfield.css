@@ -38,17 +38,25 @@
     flex-direction: column;
     margin: 0 20px;
     background-color: white;
+    border-radius: 5px;
 }
 
 .result-field .input-text {
     padding: 10px 15px;
     border-bottom: 1px solid gainsboro;
     font-size: 16px;
+    overflow: hidden;
+}
+
+.result-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .result-field .input-result {
     color: hsl(180, 66%, 49%);
-    padding: 10px 15px;
+    padding: 0 20px;
     font-size: 16px;
 }
 
@@ -60,4 +68,55 @@
     padding: 5px 0;
     border-radius: 5px;
     margin: 8px 15px 15px 15px;
+}
+
+/* mobile view */
+@media (max-width: 640px) {
+
+}
+
+/* tablet view */
+@media (min-width: 641px) and (max-width: 1007px) {
+
+}
+
+/* desktop view */
+@media (min-width: 1008px) {
+    .input-field {
+        background-image: url(../assets/images/bg-shorten-desktop.svg);
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 50px;
+        margin: 0 100px;
+    }
+    .input-field label {
+        padding: 10px 30px;
+        height: 50px;
+        min-width: 200px;
+    }
+    .input-field input {
+        height: 50px;
+        width: 100%;
+    }
+    .result-field {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 100px;
+        padding: 10px 20px 10px 20px;
+    }
+    .result-field .input-text {
+        border: none;
+    }
+    .result-field button {
+        padding: 5px 20px;
+        margin: 0;
+    }
+    .result-cont {
+        flex-direction: row;
+        align-items: center;
+    }
+    .result-list {
+        margin-top: 30px;
+    }
 }

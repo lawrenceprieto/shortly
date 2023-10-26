@@ -12,18 +12,24 @@ function InputField() {
             <div className="result-list">
                 <div className="result-field">
                     <div className="input-text">https://www.frontendmentor.io</div>
-                    <div className="input-result">https://rel.ink/k4lKyk</div>
-                    <button>Copy</button>
+                    <div className="result-cont">
+                        <div className="input-result">https://rel.ink/k4lKyk</div>
+                        <button>Copy</button>
+                    </div>
                 </div>
                 <div className="result-field">
                     <div className="input-text">https://www.frontendmentor.io</div>
-                    <div className="input-result">https://rel.ink/k4lKyk</div>
-                    <button>Copy</button>
+                    <div className="result-cont">
+                        <div className="input-result">https://rel.ink/k4lKyk</div>
+                        <button>Copy</button>
+                    </div>
                 </div>
                 <div className="result-field">
                     <div className="input-text">https://www.frontendmentor.io</div>
-                    <div className="input-result">https://rel.ink/k4lKyk</div>
-                    <button>Copy</button>
+                    <div className="result-cont">
+                        <div className="input-result">https://rel.ink/k4lKyk</div>
+                        <button>Copy</button>
+                    </div>
                 </div>
             </div>
         </>
