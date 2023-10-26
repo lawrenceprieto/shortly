@@ -42,7 +42,7 @@
     position: relative;
     display: inline;
     height: 200px;
-    width: 300px;
+    width: 300px; 
     
 }
 
@@ -50,8 +50,6 @@
     background-color: hsl(257, 27%, 26%);
     height: 70px;
     width: 70px;
-    /* min-height: 70px;
-    min-width: 70px; */
     padding: 15px;
     border-radius: 50%;
     position: absolute;
@@ -84,7 +82,7 @@
     .feature-list {
         flex-direction: row;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
     }
     .feature-list .underline {
         height: 10px;
@@ -94,15 +92,21 @@
     .feature-container img {
         left: 10%;
     }
-
     .feature-list div:nth-child(2) {
         margin-top: 80px;
     }
-
     .feature-list div:nth-child(3) {
         margin-top: 160px;
     }
     .feature-header {
         margin-bottom: 0;
+    }
+    .feature-header .heading {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .feature-header .sub-heading {
+        font-size: 16px;
+        padding: 0 350px;
     }
 }
