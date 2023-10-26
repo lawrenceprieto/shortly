@@ -26,6 +26,11 @@
     text-align: center;
     padding: 8px 0;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-field label:hover {
+    filter: opacity(80%);
 }
 
 .input-field input {
@@ -76,6 +81,11 @@
     font-size: 16px;
     padding: 5px 0;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.result-field button:hover {
+    opacity: 0.5;
 }
 
 /* mobile view */
