@@ -30,6 +30,10 @@
     font-size: 16px;
 }
 
+.footer ul li a:hover {
+    color: hsl(180, 66%, 49%);
+}
+
 .footer-socmeds ul {
     display: flex;
     justify-content: center;
@@ -42,6 +46,11 @@
 
 .footer-socmeds i {
     color: white;
+    cursor: pointer;
+}
+
+.footer-socmeds i:hover {
+    color: hsl(180, 66%, 49%);
 }
 
 /* mobile view */
