@@ -3,11 +3,13 @@ import "../styles/inputfield.css"
 function InputField() {
     return (
         <>
-            <div className="input-field">
-                <label htmlFor="link">Shorten It!</label>
-                <input type="text" id="link" 
-                    placeholder="Shorten a link here...">
-                </input>
+            <div className="input-field-body">
+                <div className="input-field">
+                    <label htmlFor="link">Shorten It!</label>
+                    <input type="text" id="link" 
+                        placeholder="Shorten a link here...">
+                    </input>
+                </div>
             </div>
             <div className="result-list">
                 <div className="result-field">
