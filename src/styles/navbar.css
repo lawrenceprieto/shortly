@@ -27,6 +27,10 @@
     color: white;
 }
 
+.nav-link ul a:hover {
+    color: black
+}
+
 .buttons {
     display: flex;
     flex-direction: column;
@@ -48,6 +52,10 @@
 .signup {
     background-color: hsl(180, 66%, 49%);
     color: white;
+}
+
+.signup:hover {
+    opacity: 0.5;
 }
 
 .navbar .hamburger {
