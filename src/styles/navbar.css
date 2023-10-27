@@ -91,6 +91,9 @@
     .desktop-nav {
         display: none;
     }
+    .navbar {
+        padding: 30px 50px;
+    }
 }
 
 /* desktop view */
