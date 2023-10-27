@@ -1,23 +1,71 @@
 import { useState } from "react";
 import "../styles/inputfield.css"
+import axios from 'axios';
 
 function InputField() {
 
     const [url, setUrl] = useState('');
     const [error, setError] = useState(false);
-
+    const [urlHistory, setUrlHistory] = useState([]);
+    const [activeIndex, setActiveIndex] = useState('');
+    
     function handlechange(e) {
         setUrl(e.target.value);
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(url);
+        const urlRegex = /^(ftp|https?):\/\/[^ "]+$/;
+        const isUrlValid = urlRegex.test(url);
+
         if (!url) {
             setError(true);
+            localStorage.clear();
+        } else if (!isUrlValid) {
+            setError(false);
+            alert(`Invalid URL format!! try https://${url}`);
+            setUrl('');
         } else {
             setError(false);
+            async function getShorten() {
+
+                const accessToken = 'ff8fb38b04e62a8229fed86216b99b4e1726a70b'; // Replace with your actual access token
+                const apiUrl = 'https://api-ssl.bitly.com/v4/shorten';
+                const formattedUrl = /^(https?|ftp):\/\//i.test(url) ? url : `http://${url}`;
+    
+                try {
+                    const response = await axios.post(
+                        apiUrl,
+                        { long_url: formattedUrl },
+                        {
+                            headers: {
+                                Authorization: `Bearer ${accessToken}`,
+                                'Content-Type': 'application/json',
+                            },
+                        }
+                    );
+            
+                    const shortenedUrl = response.data.link;
+                    const historyItem = {
+                        originalUrl: url,
+                        shortUrl: shortenedUrl,
+                    };
+
+                    const updatedHistory = [historyItem, ...urlHistory];
+                    setUrlHistory(updatedHistory);
+
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+            getShorten();
+            setUrl('');
         }
+    }
+
+    function handleCopyButton(url , index) {
+        navigator.clipboard.writeText(url.shortUrl);
+        setActiveIndex(index);
     }
 
     return (
@@ -37,27 +85,19 @@ function InputField() {
                 </div>
             </div>
             <div className="result-list">
-                {/* <div className="result-field">
-                    <div className="input-text">{shortenLinks.longLink}</div>
-                    <div className="result-cont">
-                        <div className="input-result">{shortenLinks.shortLink}</div>
-                        <button>Copy</button>
-                    </div>
-                </div> */}
-                {/* <div className="result-field">
-                    <div className="input-text">https://www.frontendmentor.io</div>
-                    <div className="result-cont">
-                        <div className="input-result">https://rel.ink/k4lKyk</div>
-                        <button>Copy</button>
-                    </div>
-                </div>
-                <div className="result-field">
-                    <div className="input-text">https://www.frontendmentor.io</div>
-                    <div className="result-cont">
-                        <div className="input-result">https://rel.ink/k4lKyk</div>
-                        <button>Copy</button>
-                    </div>
-                </div> */}
+                {
+                    urlHistory.map((url, index) => (
+                        <div className="result-field" key={index}>
+                            <div className="input-text">{url.originalUrl}</div>
+                            <div className="result-cont">
+                                <div className="input-result">{url.shortUrl}</div>
+                                <button onClick={() => handleCopyButton(url , index)} 
+                                    className={index === activeIndex ? "copied" : null }
+                                > {index === activeIndex ? "Copied!" : "Copy"} </button>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
         </>
     )
