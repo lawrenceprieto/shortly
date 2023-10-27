@@ -55,7 +55,7 @@ function InputField() {
                     setUrlHistory(updatedHistory);
 
                 } catch (error) {
-                    console.error(error);
+                    alert(error);
                 }
             }
             getShorten();
