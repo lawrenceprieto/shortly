@@ -21,7 +21,7 @@
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .input-field .input-field-btn {
@@ -39,11 +39,26 @@
 }
 
 .input-field input {
-    border: none;
     padding: 8px 0;
     border-radius: 5px;
     font-size: 15px;
     padding-left: 10px;
+}
+
+.input-error::placeholder {
+    color: hsl(0, 87%, 67%);
+}
+.input-error {
+    border: 2px solid hsl(0, 87%, 67%);
+}
+.error-msg {
+    position: absolute;
+    color: hsl(0, 87%, 67%);
+    font-size: 14px;
+    top: 43%;
+}
+.none {
+    display: none;
 }
 
 .result-list {
@@ -154,5 +169,8 @@
     .result-cont .input-result {
         margin: 0;
         padding: 0 20px;
+    }
+    .error-msg {
+        top: 70%;
     }
 }
