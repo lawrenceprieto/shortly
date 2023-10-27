@@ -9,27 +9,32 @@
     background-image: url(../assets/images/bg-shorten-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column-reverse;
     padding: 30px;
     margin: 0;
-    gap: 20px;
     border-radius: 5px;
     position: absolute;
     width: 100%;
     top: -85%;
 }
 
-.input-field label {
+.input-field form {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field .input-field-btn {
     background-color: hsl(180, 66%, 49%);
     color: white;
     text-align: center;
     padding: 8px 0;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
 }
 
-.input-field label:hover {
+.input-field .input-field-btn:hover {
     filter: opacity(80%);
 }
 
@@ -111,13 +116,15 @@
     }
     .input-field {
         background-image: url(../assets/images/bg-shorten-desktop.svg);
-        flex-direction: row-reverse;
-        align-items: center;
         padding: 50px;
         margin: 0;
         top: -70%;
     }
-    .input-field label {
+    .input-field form {
+        flex-direction: row;
+        align-items: center;
+    }
+    .input-field .input-field-btn {
         padding: 10px 30px;
         height: 50px;
         min-width: 200px;
