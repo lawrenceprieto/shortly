@@ -57,7 +57,9 @@
 
 /* tablet view */
 @media (min-width: 641px) and (max-width: 1007px) {
-
+    .herobanner {
+        padding: 20px 50px 160px 50px;
+    }
 }
 
 /* desktop view */
