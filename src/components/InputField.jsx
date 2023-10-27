@@ -4,6 +4,7 @@ import "../styles/inputfield.css"
 function InputField() {
 
     const [url, setUrl] = useState('');
+    const [error, setError] = useState(false);
 
     function handlechange(e) {
         setUrl(e.target.value);
@@ -13,7 +14,9 @@ function InputField() {
         e.preventDefault();
         console.log(url);
         if (!url) {
-            alert('enter a url');
+            setError(true);
+        } else {
+            setError(false);
         }
     }
 
@@ -22,11 +25,13 @@ function InputField() {
             <div className="input-field-body">
                 <div className="input-field">
                     <form onSubmit={handleSubmit}>
-                        <input type="text" id="link" 
+                        <input type="text"
+                            className={ error ? "input-error" : null }
                             placeholder="Shorten a link here..."
                             onChange={handlechange}
                             value={url} >
                         </input>
+                        <i className={ error ? "error-msg" : "none" }>Please add a link</i>
                         <button type="submit" className="input-field-btn">Shorten It!</button>
                     </form>
                 </div>
