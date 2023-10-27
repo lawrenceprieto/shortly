@@ -95,7 +95,9 @@
 
 /* tablet view */
 @media (min-width: 641px) and (max-width: 1007px) {
-
+    .input-field-body, .result-field {
+        margin: 0 50px;
+    }
 }
 
 /* desktop view */
