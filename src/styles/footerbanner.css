@@ -33,7 +33,9 @@
 
 /* tablet view */
 @media (min-width: 641px) and (max-width: 1007px) {
-
+    .footer-banner {
+        background-image: url(../assets/images/bg-boost-desktop.svg);
+    }
 }
 
 /* desktop view */
